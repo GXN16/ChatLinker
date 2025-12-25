@@ -1,0 +1,324 @@
+[
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483051604.svg+xml",
+        "id": "custom-app-1766483051604",
+        "name": "Gemini",
+        "url": "https://gemini.google.com/app",
+        "featured": true,
+        "description": "Gemini 3 Flash/Pro"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483004526.png",
+        "id": "custom-app-1766483004526",
+        "name": "Claude",
+        "url": "https://claude.ai/"
+    },
+    {
+        "backgroundColor": "#000000",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766481694780.svg+xml",
+        "id": "custom-app-1766481694780",
+        "name": "ChatGPT",
+        "url": "https://chatgpt.com/",
+        "featured": true,
+        "description": "OpenAI 隆重推出 GPT-5.2"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483302824.png",
+        "id": "custom-app-1766483302824",
+        "name": "豆包",
+        "url": "https://www.doubao.com/chat/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766482977324.svg+xml",
+        "id": "custom-app-1766482977324",
+        "name": "DeepSeek",
+        "url": "https://chat.deepseek.com/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483275988.png",
+        "id": "custom-app-1766483275988",
+        "name": "通义千问",
+        "url": "https://www.qianwen.com/"
+    },
+    {
+        "backgroundColor": "#000000",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483085475.png",
+        "id": "custom-app-1766483085475",
+        "name": "Grok",
+        "url": "https://grok.com/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483211683.svg+xml",
+        "id": "custom-app-1766483211683",
+        "name": "智谱清言",
+        "url": "https://chatglm.cn/main/alltoolsdetail?lang=zh",
+        "featured": true,
+        "description": "GLM-4.7 智谱AI助力高效编码"
+    },
+    {
+        "backgroundColor": "#000000",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766543364899.png",
+        "id": "custom-app-1766543364899",
+        "name": "MiniMax Agent",
+        "url": "https://agent.minimaxi.com/",
+        "featured": true,
+        "description": "MiniMax M2.1: 大幅提升多语言编程"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483334660.png",
+        "id": "custom-app-1766483334660",
+        "name": "元宝",
+        "url": "https://yuanbao.tencent.com/chat/naQivTmsDa"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483137718.png",
+        "id": "custom-app-1766483137718",
+        "name": "Kimi",
+        "url": "https://www.kimi.com/"
+    },
+    {
+        "backgroundColor": "#000000",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766557635137.x-icon",
+        "id": "custom-app-1766557635137",
+        "name": "阶跃AI",
+        "url": "https://www.stepfun.com/chats/new"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483487405.png",
+        "id": "custom-app-1766483487405",
+        "name": "Xiaomi MiMo",
+        "url": "https://aistudio.xiaomimimo.com/#/",
+        "featured": true,
+        "description": "小米发布 MiMo-V2-Flash"
+    },
+    {
+        "backgroundColor": "#000000",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483540354.svg+xml",
+        "id": "custom-app-1766483540354",
+        "name": "LongCat",
+        "url": "https://longcat.chat/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766543627349.vnd.microsoft.icon",
+        "id": "custom-app-1766543627349",
+        "name": "文心一言",
+        "url": "https://yiyan.baidu.com/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483511203.png",
+        "id": "custom-app-1766483511203",
+        "name": "扣子空间",
+        "url": "https://space.coze.cn/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766543062370.png",
+        "id": "custom-app-1766543062370",
+        "name": "Coze",
+        "url": "https://www.coze.com/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483735335.png",
+        "id": "custom-app-1766483735335",
+        "name": "Perplexity",
+        "url": "https://www.perplexity.ai/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483561940.png",
+        "id": "custom-app-1766483561940",
+        "name": "秘塔AI搜索",
+        "url": "https://metaso.cn/"
+    },
+    {
+        "backgroundColor": "#000000",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483761710.svg+xml",
+        "id": "custom-app-1766483761710",
+        "name": "HuggingChat",
+        "url": "https://huggingface.co/chat/"
+    },
+    {
+        "backgroundColor": "#000000",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483432797.svg+xml",
+        "id": "custom-app-1766483432797",
+        "name": "Copilot",
+        "url": "https://github.com/copilot"
+    },
+    {
+        "backgroundColor": "#000000",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483456341.svg+xml",
+        "id": "custom-app-1766483456341",
+        "name": "NotebookLM",
+        "url": "https://notebooklm.google.com/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766543102826.png",
+        "id": "custom-app-1766543102826",
+        "name": "Google AI Studio",
+        "url": "https://aistudio.google.com/prompts/new_chat"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766543261414.svg+xml",
+        "id": "custom-app-1766543261414",
+        "name": "Bolt AI",
+        "url": "https://bolt.new/"
+    },
+    {
+        "backgroundColor": "#000000",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766543289651.svg+xml",
+        "id": "custom-app-1766543289651",
+        "name": "v0",
+        "url": "https://v0.app/"
+    },
+    {
+        "backgroundColor": "#000000",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766543309833.png",
+        "id": "custom-app-1766543309833",
+        "name": "海螺视频",
+        "url": "https://hailuoai.com/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766543487548.svg+xml",
+        "id": "custom-app-1766543487548",
+        "name": "Poe",
+        "url": "https://poe.com/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766543948462.x-icon",
+        "id": "custom-app-1766543948462",
+        "name": "可灵 AI",
+        "url": "https://app.klingai.com/cn/"
+    },
+    {
+        "backgroundColor": "#000000",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766543995449.png",
+        "id": "custom-app-1766543995449",
+        "name": "Devv",
+        "url": "https://devv.ai/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766543211995.x-icon",
+        "id": "custom-app-1766543211995",
+        "name": "DuckDuckGo",
+        "url": "https://duckduckgo.com/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766543235629.png",
+        "id": "custom-app-1766543235629",
+        "name": "WPS 灵犀",
+        "url": "https://lingxi.wps.cn/"
+    },
+    {
+        "backgroundColor": "#000000",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766543128847.png",
+        "id": "custom-app-1766543128847",
+        "name": "知乎直答",
+        "url": "https://zhida.zhihu.com/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766551350419.x-icon",
+        "id": "custom-app-1766551350419",
+        "name": "Suno",
+        "url": "https://suno.com/home"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483379263.svg+xml",
+        "id": "custom-app-1766483379263",
+        "name": "Z.ai",
+        "url": "https://chat.z.ai/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766483176313.png",
+        "id": "custom-app-1766483176313",
+        "name": "Qwen Chat",
+        "url": "https://chat.qwen.ai/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766557899505.png",
+        "id": "custom-app-1766557899505",
+        "name": "Dola AI",
+        "url": "https://www.dola.com/chat/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766543608576.x-icon",
+        "id": "custom-app-1766543608576",
+        "name": "百度文心助手",
+        "url": "https://chat.baidu.com/search?extParams=%7B%22enter_type%22%3A%22chat_url%22%7D&isShowHello=1"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766558097018.png",
+        "id": "custom-app-1766558097018",
+        "name": "腾讯混元",
+        "url": "https://hunyuan.tencent.com/"
+    },
+    {
+        "backgroundColor": "",
+        "bordered": false,
+        "icon": "assets/apps/custom-app-1766558140345.x-icon",
+        "id": "custom-app-1766558140345",
+        "name": "Le Chat",
+        "url": "https://chat.mistral.ai/chat"
+    }
+]

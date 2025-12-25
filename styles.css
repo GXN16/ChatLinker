@@ -1,0 +1,829 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Dark Theme (Default) */
+    --bg-color: #000000;
+    --card-bg: #1c1c1e;
+    --card-hover: #2c2c2e;
+    --text-primary: #ffffff;
+    --text-secondary: #8e8e93;
+    --accent-color: #0a84ff;
+    --search-bg: #1c1c1e;
+    --border-radius: 16px;
+    --icon-border: rgba(255, 255, 255, 0.1);
+    --btn-bg: #1c1c1e;
+    --btn-hover: #2c2c2e;
+    --shadow: none;
+}
+
+[data-theme="light"] {
+    --bg-color: #f2f2f7;
+    --card-bg: #ffffff;
+    --card-hover: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #8e8e93;
+    --accent-color: #007aff;
+    --search-bg: #e3e3e8;
+    --icon-border: rgba(0, 0, 0, 0.1);
+    --btn-bg: #e3e3e8;
+    --btn-hover: #d1d1d6;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 编辑按钮样式（与GitHub和主题按钮一致）*/
+.edit-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.edit-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.edit-btn.active {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* App Container */
+.app-container {
+    min-height: 100vh;
+    padding: 40px 60px;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    column-gap: 30px;
+    row-gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Header Controls */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    order: 2;
+}
+
+.ext-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: transparent;
+    border: 1px solid var(--icon-border);
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s, opacity 0.2s;
+    opacity: 0.8;
+}
+
+.github-link:hover {
+    background-color: var(--btn-hover);
+    opacity: 1;
+}
+
+.ext-link:hover {
+    background-color: var(--btn-hover);
+    border-color: var(--text-secondary);
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.theme-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+/* Search Bar */
+.search-bar {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+    margin-right: auto;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    pointer-events: none;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 12px 16px 12px 40px;
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--icon-border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#searchInput:hover {
+    border-color: var(--text-secondary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+#searchInput:focus {
+    outline: none;
+    background-color: var(--card-bg);
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Sections */
+.section-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+    padding-left: 12px;
+    position: relative;
+}
+
+/* 标题左侧装饰条 */
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(to bottom, var(--accent-color), var(--accent-color) 70%, transparent);
+    border-radius: 2px;
+}
+
+/* Featured Carousel */
+.featured-section {
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.featured-carousel {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scroll 60s linear infinite;
+    scroll-snap-type: none;
+    overflow-x: visible;
+    padding-right: 20px;
+}
+
+.featured-carousel:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.featured-card {
+    width: 18vw;
+    max-width: 280px;
+    min-width: 200px;
+    flex-shrink: 0;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--icon-border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.featured-card:hover {
+    background-color: var(--card-hover);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+    border-color: var(--accent-color);
+}
+
+/* 编辑模式下显示删除按钮 */
+.featured-card .delete-btn {
+    display: none;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #ff3b30;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    line-height: 1;
+    z-index: 10;
+}
+
+.edit-mode .featured-card .delete-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.featured-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.featured-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.featured-info p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+}
+
+/* All Apps Grid */
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.app-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 12px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    position: relative;
+    cursor: grab;
+}
+
+.app-item:hover {
+    background-color: var(--card-hover);
+    transform: translateY(-4px);
+}
+
+.app-item.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+}
+
+.app-item.drag-over {
+    background-color: var(--accent-color);
+    opacity: 0.3;
+}
+
+/* 编辑模式下的删除按钮 */
+.app-item .delete-btn {
+    display: none;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: #ff3b30;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    line-height: 1;
+    z-index: 10;
+}
+
+.edit-mode .app-item .delete-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-icon-wrapper {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+}
+
+.app-icon {
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    border: 1px solid var(--icon-border);
+    background-color: var(--card-bg);
+    object-fit: cover;
+    box-shadow: var(--shadow);
+}
+
+.app-name {
+    font-size: 13px;
+    text-align: center;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding-top: 60px;
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+/* ====================
+   编辑模式样式
+   ==================== */
+
+/* 编辑工具栏 */
+.edit-toolbar {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--card-bg);
+    padding: 12px 20px;
+    border-radius: 50px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    display: flex;
+    gap: 12px;
+    z-index: 1000;
+    border: 1px solid var(--icon-border);
+}
+
+.toolbar-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px;
+    background: var(--btn-bg);
+    border: none;
+    border-radius: 24px;
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.toolbar-btn:hover {
+    background: var(--btn-hover);
+    transform: translateY(-2px);
+}
+
+.toolbar-btn.primary {
+    background: var(--accent-color);
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.toolbar-btn.primary:hover {
+    background: #0066cc;
+}
+
+/* 模态对话框 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: var(--card-bg);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--icon-border);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--icon-border);
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.modal-close:hover {
+    background: var(--btn-hover);
+}
+
+/* 表单样式 */
+#addModelForm {
+    padding: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: var(--search-bg);
+    border: 1px solid var(--icon-border);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 6px;
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    cursor: pointer;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.btn-secondary,
+.btn-primary {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-secondary {
+    background: var(--btn-bg);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    background: var(--btn-hover);
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0066cc;
+    transform: translateY(-1px);
+}
+
+/* 响应式 - 移动端优化 */
+@media (max-width: 768px) {
+
+    /* 整体容器紧凑化 */
+    .app-container {
+        padding: 16px 12px;
+        min-height: auto;
+    }
+
+    /* 头部紧凑布局 */
+    .main-header {
+        margin-bottom: 16px;
+        column-gap: 10px;
+        row-gap: 12px;
+    }
+
+    .brand {
+        gap: 6px;
+    }
+
+    .logo {
+        width: 24px;
+        height: 24px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .search-bar {
+        order: 3;
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+    }
+
+    #searchInput {
+        padding: 10px 12px 10px 36px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+
+    .search-icon {
+        left: 10px;
+    }
+
+    .header-controls {
+        margin-left: auto;
+        gap: 8px;
+    }
+
+    .ext-text {
+        display: none;
+    }
+
+    .ext-link {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    /* 热门区域紧凑化 */
+    .featured-section {
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+        padding-left: 10px;
+    }
+
+    .section-title::before {
+        width: 3px;
+        height: 16px;
+    }
+
+    .featured-card {
+        min-width: 85vw;
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .featured-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+    }
+
+    .featured-info h3 {
+        font-size: 15px;
+    }
+
+    .featured-info p {
+        font-size: 12px;
+    }
+
+    /* iOS 风格应用网格 - 4列5行布局 */
+    .apps-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px 6px;
+        margin-bottom: 20px;
+    }
+
+    .app-item {
+        padding: 8px 4px;
+        border-radius: 10px;
+    }
+
+    .app-icon-wrapper {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 6px;
+    }
+
+    .app-icon {
+        border-radius: 12px;
+    }
+
+    .app-name {
+        font-size: 11px;
+        line-height: 1.2;
+        max-width: 100%;
+        /* 最多显示2行 */
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
+
+    /* 编辑工具栏 */
+    .edit-toolbar {
+        bottom: 16px;
+        padding: 8px 14px;
+        flex-wrap: wrap;
+        max-width: 90%;
+    }
+
+    .toolbar-btn {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    /* 删除按钮适配 */
+    .app-item .delete-btn {
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        top: 2px;
+        right: 2px;
+    }
+
+    /* Footer */
+    footer {
+        padding-top: 30px;
+        font-size: 11px;
+    }
+}
+
+/* 超小屏幕优化 (iPhone SE 等) */
+@media (max-width: 375px) {
+    .app-container {
+        padding: 12px 8px;
+    }
+
+    .apps-grid {
+        gap: 6px 4px;
+    }
+
+    .app-icon-wrapper {
+        width: 52px;
+        height: 52px;
+    }
+
+    .app-name {
+        font-size: 10px;
+    }
+}
+
+/* 大屏手机优化 (iPhone Pro Max 等) */
+@media (min-width: 376px) and (max-width: 768px) {
+    .app-icon-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+
+    .app-name {
+        font-size: 12px;
+    }
+}
