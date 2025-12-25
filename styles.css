@@ -16,6 +16,8 @@
     --btn-bg: #1c1c1e;
     --btn-hover: #2c2c2e;
     --shadow: none;
+    --icon-bg: #1c1c1e;
+    /* Ensure icons always have a dark background for visibility */
 }
 
 [data-theme="light"] {
@@ -30,6 +32,8 @@
     --btn-bg: #e3e3e8;
     --btn-hover: #d1d1d6;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --icon-bg: #ffffff;
+    /* In light mode, use white background. White icons may need manual background color or dark version. */
 }
 
 body {
@@ -312,6 +316,7 @@ h1 {
     border-radius: 12px;
     object-fit: cover;
     flex-shrink: 0;
+    background-color: var(--icon-bg);
 }
 
 .featured-info {
@@ -412,7 +417,7 @@ h1 {
     height: 100%;
     border-radius: 14px;
     border: 1px solid var(--icon-border);
-    background-color: var(--card-bg);
+    background-color: var(--icon-bg);
     object-fit: cover;
     box-shadow: var(--shadow);
 }

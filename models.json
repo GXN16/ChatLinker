@@ -70,7 +70,7 @@
         "description": "GLM-4.7 智谱AI助力高效编码"
     },
     {
-        "backgroundColor": "#000000",
+        "backgroundColor": "",
         "bordered": false,
         "icon": "assets/apps/custom-app-1766543364899.png",
         "id": "custom-app-1766543364899",
@@ -96,7 +96,7 @@
         "url": "https://www.kimi.com/"
     },
     {
-        "backgroundColor": "#000000",
+        "backgroundColor": "",
         "bordered": false,
         "icon": "assets/apps/custom-app-1766557635137.x-icon",
         "id": "custom-app-1766557635137",
@@ -114,7 +114,7 @@
         "description": "小米发布 MiMo-V2-Flash"
     },
     {
-        "backgroundColor": "#000000",
+        "backgroundColor": "",
         "bordered": false,
         "icon": "assets/apps/custom-app-1766483540354.svg+xml",
         "id": "custom-app-1766483540354",
@@ -210,7 +210,7 @@
         "url": "https://v0.app/"
     },
     {
-        "backgroundColor": "#000000",
+        "backgroundColor": "",
         "bordered": false,
         "icon": "assets/apps/custom-app-1766543309833.png",
         "id": "custom-app-1766543309833",
@@ -218,7 +218,7 @@
         "url": "https://hailuoai.com/"
     },
     {
-        "backgroundColor": "",
+        "backgroundColor": "#000000",
         "bordered": false,
         "icon": "assets/apps/custom-app-1766543487548.svg+xml",
         "id": "custom-app-1766543487548",
@@ -226,7 +226,7 @@
         "url": "https://poe.com/"
     },
     {
-        "backgroundColor": "",
+        "backgroundColor": "#000000",
         "bordered": false,
         "icon": "assets/apps/custom-app-1766543948462.x-icon",
         "id": "custom-app-1766543948462",
@@ -258,7 +258,7 @@
         "url": "https://lingxi.wps.cn/"
     },
     {
-        "backgroundColor": "#000000",
+        "backgroundColor": "",
         "bordered": false,
         "icon": "assets/apps/custom-app-1766543128847.png",
         "id": "custom-app-1766543128847",
@@ -274,7 +274,7 @@
         "url": "https://suno.com/home"
     },
     {
-        "backgroundColor": "",
+        "backgroundColor": "#000000",
         "bordered": false,
         "icon": "assets/apps/custom-app-1766483379263.svg+xml",
         "id": "custom-app-1766483379263",

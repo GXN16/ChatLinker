@@ -11,7 +11,7 @@ function renderFeatured() {
 
     featuredContainer.innerHTML = loopApps.map(app => `
         <a href="${app.url}" class="featured-card" target="_blank" title="${app.name}">
-            <img src="${app.icon}" alt="${app.name}" class="featured-icon">
+            <img src="${app.icon}" alt="${app.name}" class="featured-icon" style="${app.backgroundColor ? `background-color: ${app.backgroundColor}` : ''}">
             <div class="featured-info">
                 <h3>${app.name}</h3>
                 <p>${app.description || 'AI 助手'}</p>
@@ -39,7 +39,7 @@ function renderApps(filterText = '') {
     appsGrid.innerHTML = filteredApps.map(app => `
         <a href="${app.url}" class="app-item" target="_blank">
             <div class="app-icon-wrapper">
-                <img src="${app.icon}" alt="${app.name}" class="app-icon">
+                <img src="${app.icon}" alt="${app.name}" class="app-icon" style="${app.backgroundColor ? `background-color: ${app.backgroundColor}` : ''}">
             </div>
             <span class="app-name">${app.name}</span>
         </a>
